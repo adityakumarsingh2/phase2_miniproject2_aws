@@ -1,5 +1,11 @@
 # 🌐 AWS S3 Static Website Hosting Project
 
+## 🔗 Live Website
+
+👉 https://aditya-miniproject2-s3.s3.ap-southeast-2.amazonaws.com/index.html
+
+---
+
 ## 📌 Project Information
 
 **Project Name:** `aditya-miniproject2-s3`
