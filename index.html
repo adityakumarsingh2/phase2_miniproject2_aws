@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AWS Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf3ff;
+            color: #172033;
+        }
+
+        header {
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            padding: 48px 20px;
+            color: #ffffff;
+            background:
+                linear-gradient(rgba(9, 42, 77, 0.78), rgba(9, 42, 77, 0.72)),
+                url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero-content,
+        main {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 8px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.12);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            overflow-wrap: break-word;
+        }
+
+        h1 {
+            max-width: 760px;
+            margin: 0 0 18px;
+            font-size: 46px;
+            line-height: 1.12;
+        }
+
+        .hero-content p {
+            max-width: 700px;
+            margin: 0;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        main {
+            padding: 34px 20px 50px;
+        }
+
+        .intro {
+            margin: -70px 0 28px;
+            padding: 28px;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 16px 36px rgba(23, 32, 51, 0.16);
+        }
+
+        .intro h2,
+        .section h2 {
+            margin: 0 0 12px;
+            color: #0f4c81;
+            font-size: 28px;
+        }
+
+        .intro p,
+        .section p,
+        li {
+            color: #445166;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin: 28px 0;
+        }
+
+        .card,
+        .section {
+            border: 1px solid #d7e4f2;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 10px 24px rgba(23, 32, 51, 0.08);
+        }
+
+        .card {
+            padding: 24px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #0f4c81;
+            font-size: 22px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .section {
+            padding: 28px;
+            margin-top: 22px;
+        }
+
+        ol {
+            margin: 18px 0 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .url-box {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 8px;
+            background: #0f4c81;
+            color: #ffffff;
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            padding: 24px 20px;
+            text-align: center;
+            background: #172033;
+            color: #dce8f8;
+        }
+
+        footer p {
+            margin: 0;
+            color: #dce8f8;
+            font-size: 15px;
+        }
+
+        @media (max-width: 780px) {
+            header {
+                min-height: 56vh;
+                padding: 42px 18px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+
+            .intro {
+                margin-top: -42px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-content">
+            <span class="badge">aditya-miniproject2-s3</span>
+            <h1>Hello AWS, I am Aditya Kumar Singh</h1>
+            <p>This project is a simple static website created with HTML and CSS, prepared to be uploaded to the aditya-miniproject2-s3 Amazon S3 bucket and shared through a public website URL.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Project Overview</h2>
+            <p>The goal of this assignment is to create a basic webpage, upload it to the aditya-miniproject2-s3 Amazon S3 bucket, enable static website hosting, and make the website publicly accessible. This page explains the task, the hosting process, and the final result in a clean presentation.</p>
+        </section>
+
+        <section class="grid" aria-label="Project highlights">
+            <article class="card">
+                <h3>Website</h3>
+                <p>A responsive HTML page with simple styling, clear content, and a professional layout.</p>
+            </article>
+
+            <article class="card">
+                <h3>Hosting</h3>
+                <p>Amazon S3 is used as the storage and hosting service for the static website files.</p>
+            </article>
+
+            <article class="card">
+                <h3>Access</h3>
+                <p>The bucket policy allows public read access so visitors can open the website from a browser.</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>Task Workflow</h2>
+            <p>To complete the assignment, the website file is created first and then configured in AWS S3 for public static hosting.</p>
+            <ol>
+                <li>Create an <strong>index.html</strong> file for the website homepage.</li>
+                <li>Create a unique S3 bucket from the AWS Management Console.</li>
+                <li>Upload the <strong>index.html</strong> file into the S3 bucket.</li>
+                <li>Enable static website hosting and set <strong>index.html</strong> as the index document.</li>
+                <li>Add a bucket policy that allows public read access for website visitors.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Final Output</h2>
+            <p>After the file is uploaded and made public, the project can be opened using the S3 public object URL.</p>
+            <div class="url-box">https://aditya-miniproject2-s3.s3.ap-southeast-2.amazonaws.com/index.html</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Aditya Kumar Singh for the AWS S3 static website hosting assignment.</p>
+    </footer>
+</body>
+</html>
